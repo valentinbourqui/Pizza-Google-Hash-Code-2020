@@ -6,7 +6,7 @@ Written in Javascript (NodeJs)
 
 - Best results
 - Optimised
-- This solution didn't find alaways the best solution but in this case it's work. Could be better for sure :)
+- Could be better for sure :)
 
 <img src="cover.jpg">
 
