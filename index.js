@@ -66,17 +66,7 @@ const solve = (max, n, inputs, filename) => {
     }
 
     // Traverse the current Pizza array in reverse order
-    const results = soloveRecursive(
-      index,
-      0,
-      inputs,
-      max,
-      sumList,
-      total,
-      0,
-      [],
-      0
-    );
+    const results = solveRecursive(index, inputs, max, total, 0, [], 0);
     if (total < results.total) {
       total = results.total;
       solve = results.solve;
@@ -103,19 +93,9 @@ const solve = (max, n, inputs, filename) => {
   });
 };
 
-const soloveRecursive = (
-  index,
-  indexMin,
-  inputs,
-  max,
-  sumList,
-  total,
-  sum,
-  tempsolve,
-  deep
-) => {
+const solveRecursive = (index, inputs, max, total, sum, tempsolve, deep) => {
   let solve = [];
-  for (let j = index; j >= indexMin; j--) {
+  for (let j = index; j >= 0; j--) {
     let value = Number(inputs[j]);
 
     let tempsum = sum + value;
@@ -132,12 +112,10 @@ const soloveRecursive = (
       const tempsolveTmp = JSON.parse(JSON.stringify(tempsolve));
       const jOld = tempsolveTmp.shift();
       const sumOld = tempsum - value - Number(inputs[jOld]);
-      const result = soloveRecursive(
+      const result = solveRecursive(
         j,
-        0,
         inputs,
         max,
-        sumList,
         total,
         sumOld,
         tempsolveTmp,
