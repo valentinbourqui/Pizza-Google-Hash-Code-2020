@@ -1,0 +1,27 @@
+{
+  "name": "hashcode",
+  "version": "1.0.0",
+  "description": "hashcode 2020",
+  "main": "index.js",
+  "author": "valentin bourqui",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "eslintConfig": {
+    "extends": "react-app",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "legacyDecorators": true
+      }
+    },
+    "rules": {
+      "import/no-webpack-loader-syntax": 0
+    }
+  },
+  "dependencies": {
+    "babel-plugin-react-intl": "^5.1.18",
+    "immutable": "^4.0.0-rc.12",
+    "react-scripts": "^3.4.0"
+  }
+}
